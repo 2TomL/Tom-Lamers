@@ -1,6 +1,5 @@
-// --- Snake game created with plain JavaScript by Ibrahim fariat ---
 if (document.querySelector('#game .container.noselect')) {
-// Add global preventDefault for arrow keys when game is active
+
 document.addEventListener('keydown', function(e) {
   if (e.key.startsWith('Arrow')) {
     e.preventDefault();
@@ -402,7 +401,6 @@ initialize();
 }
 
 $(document).ready(function(){
-    // Slick slider for future use (if you add reviews or similar)
     if ($('.slider').length) {
         $('.slider').slick({
             arrows: false,
@@ -412,8 +410,6 @@ $(document).ready(function(){
         });
     }
 
-
-    // Hamburger menu mobile toggle (enkel mobiel, echte toggle, fix scroll)
     (function() {
       const hamburger = document.querySelector('.hamburger');
       const mobileNav = document.getElementById('mobile-nav');
@@ -446,7 +442,6 @@ $(document).ready(function(){
         toggleMenu(e);
       }, {passive: false});
 
-      // Sluit menu bij klik buiten menu
       document.addEventListener('click', function(e) {
         if (
           mobileNav.classList.contains('open') &&
@@ -458,7 +453,6 @@ $(document).ready(function(){
         }
       });
 
-      // Sluit menu bij klik op link
       mobileNav.querySelectorAll('a').forEach(function(link) {
         link.addEventListener('click', function() {
           closeMenu();
@@ -466,8 +460,6 @@ $(document).ready(function(){
       });
     })();
 
-
-    // Smooth scroll voor desktop nav links (ook Home)
     document.querySelectorAll('nav .left a').forEach(function(link) {
         link.addEventListener('click', function(e) {
             const href = link.getAttribute('href');
@@ -483,14 +475,12 @@ $(document).ready(function(){
         });
     });
 
-    // Smooth scroll voor hamburger menu links (ook Home)
     document.querySelectorAll('.mobile-nav a').forEach(function(link) {
       link.addEventListener('click', function(e) {
         const href = link.getAttribute('href');
         if (href && href.startsWith('#')) {
           e.preventDefault();
           if (href === '#home' || href === '#top') {
-            // Sluit menu en scroll naar top
             document.querySelector('.mobile-nav').classList.remove('open');
             document.body.classList.remove('no-scroll');
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -506,7 +496,6 @@ $(document).ready(function(){
       });
     });
 
-    // Contact button scrolls to contact section
     const contactBtn = document.querySelector('nav .btn.btn-primary');
     if (contactBtn) {
         contactBtn.addEventListener('click', function(e) {
@@ -515,10 +504,6 @@ $(document).ready(function(){
         });
     }
 
-    // ...existing code...
-
-
-    // Contact form handling with fallback to mailto
     (function() {
       var form = document.querySelector('form[action*="formspree"]');
       if (!form) return;
@@ -535,12 +520,10 @@ $(document).ready(function(){
           if (xhr.readyState !== 4) return;
           
           if (xhr.status === 200) {
-            // Success with Formspree
             form.style.display = 'none';
             var msg = document.getElementById('form-success');
             if (msg) msg.style.display = 'block';
           } else {
-            // Fallback to mailto if Formspree fails
             var name = form.querySelector('[name="name"]').value;
             var email = form.querySelector('[name="_replyto"]').value;
             var subject = form.querySelector('[name="subject"]').value;
