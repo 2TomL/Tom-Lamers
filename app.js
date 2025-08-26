@@ -1,3 +1,12 @@
+// Video popup functionaliteit voor MMMt project
+function openVideoPopup(e) {
+  e.preventDefault();
+  document.getElementById('video-popup').style.display = 'flex';
+}
+
+function closeVideoPopup() {
+  document.getElementById('video-popup').style.display = 'none';
+}
 if (document.querySelector('#game .container.noselect')) {
 
 document.addEventListener('keydown', function(e) {

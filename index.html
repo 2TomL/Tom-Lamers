@@ -139,6 +139,28 @@
                             <img src="./img/github.png" alt="GitHub link" class="project-icon">
                         </a>
                     </div>
+                        <div class="card">
+                            <a href="https://github.com/2TomL/Mikey-s_Magic_Mixer-tool" target="_blank" rel="noopener">
+                                <img src="./img/Project_MMMt.png" alt="Mikeys MagicMixing-tool">
+                            </a>
+                            <h2>Mikeys MagicMixing-tool</h2>
+                            <p>DJ set generator tool. Upload your tracks, generate a setlist, en download je mix.</p>
+                            <a class="project-link" href="https://github.com/2TomL/Mikey-s-Magic-Mixer-tool" target="_blank" rel="noopener" title="GitHub">
+                                <img src="./img/github.png" alt="GitHub link" class="project-icon">
+                            </a>
+                            <a class="project-link" href="#" title="Bekijk video" onclick="openVideoPopup(event)">
+                                <img src="./img/video_icon.svg" alt="Video link" class="project-icon">
+                            </a>
+                            <div id="video-popup" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);z-index:9999;justify-content:center;align-items:center;">
+                                <div style="position:relative;width:80vw;max-width:700px;margin:auto;top:10vh;">
+                                    <button onclick="closeVideoPopup()" style="position:absolute;top:-40px;right:0;background:#fff;border:none;padding:8px 16px;font-size:1.2rem;cursor:pointer;z-index:10001;">Sluiten</button>
+                                    <video controls autoplay style="width:100%;border-radius:8px;background:#222;">
+                                        <source src="./img/Desktop 2025.08.26 - 20.32.04.03.mp4" type="video/mp4">
+                                        Je browser ondersteunt geen video.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
                     <div class="card">
                         <a href="https://2toml.github.io/DJ_Swordz/" target="_blank" rel="noopener">
                             <img src="./img/DJ_Swordz.png" alt="DJ Swordz">
