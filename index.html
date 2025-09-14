@@ -26,8 +26,14 @@
         </ul>
     </nav>
     <div class="site-main-wrapper">
-        <header>
-            <div class="container">
+        <header style="position:relative;">
+            <div class="home-bg-canvas-wrapper">
+                <canvas id="main-canvas"></canvas>
+                <div id="webgpu-warning" class="warning-message">
+                    WebGPU is not supported in your browser. Please try using the latest version of Chrome or Edge.
+                </div>
+            </div>
+            <div class="container" style="position:relative;">
                 <nav id="main-nav" class="flex items-center justify-between">
                     <div class="left flex items-center">
                         <div class="branding">
@@ -47,7 +53,7 @@
                         <button class="btn btn-primary">Contact</button>
                     </div>
                 </nav>
-                <div class="hero flex items-center justify-between">
+                <div class="hero flex items-center justify-between" style="position:relative; z-index:1;">
                     <div class="left flex-1 flex justify-center">
                         <img src="./img/profile-pic.png" alt="Tom Lamers profile picture">
                     </div>
@@ -318,6 +324,6 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./app.js"></script>
+    <script type="module" src="bg.js"></script>
 </body>
-
 </html>
