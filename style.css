@@ -15,8 +15,8 @@
   position: relative;
   width: 80vw;
   max-width: 700px;
-  margin: auto;
-  top: 10vh;
+  margin: 80px auto 0 auto;
+  top: 0;
 }
 .video-popup-close {
   position: absolute;
